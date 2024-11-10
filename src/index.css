@@ -37,22 +37,26 @@ header > p {
 }
 
 .meme {
+  min-width: 650px;
+  min-height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* .meme {
   position: relative;
-  width: 90%;
+  max-width: 650px;
+  max-height: 700px;
   margin: auto;
 }
 
 .meme > img {
-  width: 100%;
-}
+  width: inherit;
+} */
 
 .meme > h2 {
   position: absolute;
-  width: 80%;
-  text-align: center;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 15px 0;
   padding: 0 5px;
   font-family: impact, sans-serif;
   font-size: 2em;
@@ -65,11 +69,12 @@ header > p {
 }
 
 .meme > .bottom {
-  bottom: 0;
+  align-self: flex-end;
 }
 
 .meme > .top {
-  top: 0;
+  position: absolute;
+  align-self: flex-start;
 }
 
 .meme-form {
